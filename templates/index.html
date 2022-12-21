@@ -1,1 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home page</title>
+  </head>
+  <body>
+<center>
+    <h1>Titanic Disaster Survival Prediction</h1>
+    <form action="http://localhost:8000/result">
+      {% csrf_token %}
 
+      <p>Age : </p>
+      <input type="text" name="age">
+      <br>
+
+      <p>No of Pregnancies : </p>
+      <input type="text" name="preg">
+      <br>
+
+      <p>Glucose Level : </p>
+      <input type="text" name="glu">
+      <br>
+
+      <p>Blood Pressure Level : </p>
+      <input type="text" name="bp">
+      <br>
+
+      <p>Skin Thickness : </p>
+      <input type="text" name="st">
+      <br>
+
+      <p>Insulin Level : </p>
+      <input type="text" name="ins">
+      <br>
+
+      <p>BMI(Body Mass Index) : </p>
+      <input type="text" name="bmi">
+      <br>
+
+      <p>DiabetesPedigreeFunction : </p>
+      <input type="text" name="dpf">
+      <br>
+
+      <input type="submit" value='Get Predictions'>
+    </form><br>
+{% include 'result.html' %}
+<center>
+  </body>
+</html>
